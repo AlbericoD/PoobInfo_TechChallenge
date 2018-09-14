@@ -20,5 +20,15 @@
     "url": "https://github.com/AlbericoD/PoobInfo_TechChallenge/issues"
   },
   "author": "Albérico Dias Barreto Filho <a.diasbarreto@icloud.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "express-catch-errors": "^0.1.0",
+    "helmet": "^3.13.0",
+    "mongoose": "^5.2.14",
+    "winston": "^3.1.0"
+  }
 }
