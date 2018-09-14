@@ -71,7 +71,7 @@ export default class Company extends Component {
             <Col>
               <Form onSubmit={this.sendForm.bind(this)}>
                 <FormGroup>
-                  <Label for="companyNameL">Company Name</Label>
+                  <Label for="companyNameL" />
                   <InputGroupAddon addonType="append">
                     <Input
                       type="text"
