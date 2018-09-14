@@ -10,12 +10,17 @@ CustomerID (int)
 • DOB (datetime)
 */
 const CustomerSchema = new mongoose.Schema({
-  customerID: {},
-  companyID: {},
+  customerID: { type: mongoose.Schema.Types.ObjectId },
+  companyID: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Company',
+    unique: true,
+    required: true
+  },
   createDate: { type: Date, default: Date.now },
-  rewardsNumber: {},
-  name: {},
-  email: {},
+  rewardsNumber: { type: String },
+  name: { type: String },
+  email: { type: String },
   dbo: { type: Date, default: Date.now }
 });
 

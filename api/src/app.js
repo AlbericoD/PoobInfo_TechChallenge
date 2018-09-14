@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use('/api/company', companyRouter);
-app.use('/api/customerRouter', customerRouter);
+app.use('/api/customer', customerRouter);
 
 app.use(notFound);
 app.use(catchAll);
