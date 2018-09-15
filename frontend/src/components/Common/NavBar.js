@@ -1,15 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
   NavLink
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
-export default class Example extends React.Component {
+export default class GeneralNavBar extends Component {
   constructor(props) {
     super(props);
 
@@ -27,19 +26,19 @@ export default class Example extends React.Component {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">Home</NavbarBrand>
+          <Link to={'/'}>Home</Link>
+
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/company">
-                  <Link to={'/company'}>Got to Company</Link>
-                </NavLink>
+                <NavLink />
+                <Link to={'/company'}>Go to Company</Link>
               </NavItem>
               <NavItem>
-                <NavLink href="/company">
-                  <Link to={'/customer'}>Got to Customer</Link>
-                </NavLink>
+                <NavLink />
+                &nbsp;&nbsp;
+                <Link to={'/customer'}>Go to Customer</Link>
               </NavItem>
               <NavItem>
                 <NavLink href="https://github.com/AlbericoD/PoobInfo_TechChallenge">

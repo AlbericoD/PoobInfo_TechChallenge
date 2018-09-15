@@ -15,9 +15,8 @@ module.exports.remove = async (req, res) => {
   await Company.findByIdAndRemove(req.params.id);
   res.json(req.params.id);
 };
-
 module.exports.update = async (req, res) => {
-  const company = await User.findOneAndUpdate(
+  const company = await Company.findOneAndUpdate(
     { _id: req.params.id },
     req.body,
     {

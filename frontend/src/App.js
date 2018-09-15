@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
-import NavBar from './components/NavBar';
-import Welcome from './components/Welcome';
-import Company from './components/Company';
-
+import NavBar from './components/Common/NavBar';
+import WelcomePage from './pages/WelcomePage';
+import CompanyPage from './pages/CompanyPage';
+import CustomerPage from './pages/CustomerPage';
 class App extends Component {
   render() {
     return (
@@ -13,9 +13,9 @@ class App extends Component {
           <NavBar />
         </header>
         <Switch>
-          <Route exact path="/" component={Welcome} />
-          <Route path="/company" component={Company} />
-          <Route path="/customer" component={Company} />
+          <Route exact path="/" component={WelcomePage} />
+          <Route path="/company" component={CompanyPage} />
+          <Route path="/customer" component={CustomerPage} />
         </Switch>
       </div>
     );

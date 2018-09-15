@@ -13,12 +13,13 @@ const CustomerSchema = new mongoose.Schema({
   customerID: { type: mongoose.Schema.Types.ObjectId },
   companyID: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Company',
-    unique: true,
-    required: true
+    ref: 'Company'
   },
   createDate: { type: Date, default: Date.now },
-  rewardsNumber: { type: String },
+  rewards: {
+    type: String,
+    default: () => Math.floor(Math.random() * 1000000 + 1)
+  },
   name: { type: String },
   email: { type: String },
   dbo: { type: Date, default: Date.now }
